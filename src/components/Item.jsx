@@ -5,14 +5,14 @@ export default function Item({ item, onDeleteItem, onToggleItem }) {
     <li>
       <input
         type="checkbox"
-        value={item.packed}
+        value={item.purchased}
         onChange={() => onToggleItem(item.id)}
       />
-      <span style={{ textDecoration: item.packed ? "line-through" : "none" }}>
+      <span style={{ textDecoration: item.purchased ? "line-through" : "none" }}>
         {item.description}({item.quantity})
       </span>
-      <button onClick={() => onDeleteItem(item.id)} style={{ color: "#fff" }}>
-        x
+      <button onClick={() => onDeleteItem(item.id)} style={{ color: "red" }}>
+        X
       </button>
     </li>
   );
